@@ -22,11 +22,15 @@ let wineList = [{name: "Wine A", price: 8.99},
                 {name: "Wine 44", price: 38.44}, 
                 {name: "Wine 72", price: 22.77}]
 
+let wineList1 = [{name: "Wine A", price: 8.99}]
+
+let wineList2 = []
 
 function chosenWine (wines) {
     if (wines.length === 0) {
         return null
     }
+
     if (wines.length === 1) {
         return Object.values(wines[0])[0]
     }
@@ -46,3 +50,5 @@ function chosenWine (wines) {
 }
 
 console.log(chosenWine(wineList));
+console.log(chosenWine(wineList1));
+console.log(chosenWine(wineList2));

@@ -30,8 +30,8 @@ function num_of_digits(num) {
 
 function num_of_digits_2(num) {
     return Math.abs(num).toString().length;
-
 }
+
 
 console.log(num_of_digits_2(-108865219));
 

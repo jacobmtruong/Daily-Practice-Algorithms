@@ -20,10 +20,10 @@ function oddishOrEvenish(num) {
     let str = num.toString().split("")
     let total = 0
     for (let i = 0; i < str.length; i++) {
-        total += str[i]
+        total += parseInt(str[i])
     }
     return total % 2 === 0 ? "Evenish" : "Oddish" 
 }
 
 
-console.log(oddishOrEvenish(55551));
+console.log(oddishOrEvenish(694));

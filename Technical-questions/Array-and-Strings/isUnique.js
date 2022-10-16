@@ -13,17 +13,16 @@ function isUniqueString(string) {
         }
     }
     return true
-} 
-
+}
 
 //hashMap
 function isUniqueHashMap(string) {
     let obj = {}
-    for (let i = 0; i < string.length; i++) {
-        if(obj[string[i]] && obj[string[i]] >= 1){
+    for (let i = 0; i < string.length; i++) { 
+        if(obj[string[i]] && obj[string[i]] >= 1){ 
             return false
         } else {
-            obj[string[i]] = 1
+            obj[string[i]] = 1 //obj = { a: 1, b: 1, c: 1, d: 1 }
         }
     }
     return true

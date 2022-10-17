@@ -16,4 +16,3 @@ const objs = Object.keys(object)
 
 Object.entries(object) // [ [ 'name', 'Sam' ], [ 'age', '28' ] ]
 
- 

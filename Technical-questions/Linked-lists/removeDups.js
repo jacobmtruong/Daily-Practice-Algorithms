@@ -1,39 +1,55 @@
-
-// remiveDups redone
-
-
-function removeDuplicates(list) {
-  const _set = new Set();
-  let cur = list.head;
-  let prev = null;
-  while (cur) {
-    if (_set.has(cur.value)) {
-      // duplicate found
-      // de-link it from the list
-      // cur jumps next but previous stays
-      // right behind cur (as always)
-      let elem = cur;
-      prev.next = cur.next;
-      cur = cur.next;
-      elem.next = null;
+class Node {
+    constructor(data, next = null) {
+        this.data = data;
+        this.next = next;
     }
-    else {
-      // add to the set
-      _set.add(cur.value);
-      prev = cur;
-      cur = cur.next;
-    }
-  }
-
-  return list;
 }
 
-// quick test
-let list = new LinkedList();
-for (let elem of [1, 5, 1, 6, 8, 6, 8, 8, 8, 8]) {
-  list.append(elem);
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+
+    // Insert first node
+    insertFirst(data) {
+        this.head = new Node(data, this.head);
+        this.size++
+    }
+
+    // Print
+    printListData() {
+        let current = this.head;
+
+        while (current) {
+            console.log(current.data)
+            current = current.next;
+        }
+        console.log(this.size);
+    }
+
+
+    removeDups() {
+        let current = this.head;
+        while (current !== null && current.next !== null) {
+            if (current.data === current.next.data) {
+                current.next = current.next.next
+            } else {
+                current = current.next
+            }
+        }
+        return console.log(this.head);
+    }
 }
 
-removeDuplicates(list);
+const ll = new LinkedList();
 
-console.log(list._toArray()); // [1, 5, 6, 8]
+ll.insertFirst(100)
+ll.insertFirst(100)
+ll.insertFirst(300)
+ll.insertFirst(200)
+ll.insertFirst(200)
+
+ll.removeDups()
+
+ll.printListData()

@@ -28,7 +28,8 @@ class LinkedList {
         console.log(this.size);
     }
 
-
+    // ---- REMOVE DUPS ----
+    
     removeDups() {
         let current = this.head;
         while (current !== null && current.next !== null) {

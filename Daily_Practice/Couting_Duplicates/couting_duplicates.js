@@ -11,6 +11,7 @@ function duplicateCount(text){
             map[lowertext[i]] = 1
         }
     }
+    console.log(map);
     for (let key in map) {
         if (map[key] > 1) {
             count++

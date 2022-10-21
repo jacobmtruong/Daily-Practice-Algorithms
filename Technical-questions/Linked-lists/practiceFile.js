@@ -41,6 +41,22 @@ class LinkedList {
         this.size++
     }
 
+    addtoBack(data) {
+        if (this.head == null) {
+            this.head = new Node(data, this.head);
+        } else {
+            const node = new Node(data)
+            let current = this.head
+
+            while (current.next != null) {
+                current = current.next
+            }
+
+            current.next = node
+            this.size++
+        }
+    }
+
     printList() {
         let current = this.head
         while (current) {
@@ -57,6 +73,7 @@ linkedList.addToFront(20)
 linkedList.addToFront(10)
 linkedList.addToFront(5)
 linkedList.addAtIndex(2, 1)
+linkedList.addtoBack(50)
 
 linkedList.printList()
 

@@ -35,9 +35,7 @@ const ll = new LinkedList()
 
 ll.addToFront(5)
 
-
 ll.addToFront(4)
-
 
 ll.addToFront(3)
 

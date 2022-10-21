@@ -15,7 +15,7 @@ class LinkedList {
     addToFront(data) {
         this.head = new Node(data, this.next);
         this.size++
-    } 
+    }
 }
 
 let linkedList = new LinkedList

@@ -12,13 +12,11 @@ class LinkedList {
         this.size = 0
     }
 
-
     // add to front
     addToFront(data) {
         this.head = new Node(data, this.head)
         this.size++;
     }
-
 
     // print linkedList
     print() {
@@ -40,7 +38,6 @@ ll.addToFront(4)
 ll.addToFront(3)
 
 console.log(ll);
-
 
 ll.print()
 

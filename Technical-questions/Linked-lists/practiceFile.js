@@ -65,15 +65,32 @@ class LinkedList {
         }
     }
 
+    removeDups() {
+        let current = this.head
+        while (current !== null && current.next !== null) {
+            if (current.data === current.next.data) {
+                current.next = current.next.next
+            } else {
+                current = current.next
+            }
+        }
+        return console.log(this.head);
+    }
+
 }
 
 let linkedList = new LinkedList
 
 linkedList.addToFront(20)
 linkedList.addToFront(10)
+linkedList.addToFront(10)
 linkedList.addToFront(5)
-linkedList.addAtIndex(2, 1)
+linkedList.addToFront(5)
 linkedList.addtoBack(50)
+linkedList.addtoBack(50)
+
+// linkedList.printList()
+linkedList.removeDups()
 
 linkedList.printList()
 

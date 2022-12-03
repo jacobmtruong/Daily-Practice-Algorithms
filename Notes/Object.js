@@ -73,5 +73,16 @@ const phoneArray = [ [ 'brand', 'Nokia' ], [ 'model', 'N65' ] ]
 Object.fromEntries(phoneArray)  // { brand: 'Nokia', model: 'N65' }
 
 
+// ============ .freeze() ============ CANNOT ALTER THE OBJECT ANYMORE (ADD, EDIT, DELETE)
 
- 
+const person2 = {
+    name: 'John',
+    age: 34
+}
+
+Object.freeze(person2)
+
+delete person2.age
+
+//console.log(person2)    //{ name: 'John', age: 34 }
+

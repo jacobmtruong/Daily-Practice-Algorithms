@@ -16,6 +16,24 @@ const foods = [
     }
 ]
 
+
+const changeName = ([id, name], object) => {
+    for (let i = 0; i < object.length; i++) {
+        if (object[i].id === id) {
+            object[i].name = name
+        }
+    }
+    return object
+}
+
+console.log(changeName([1, "Tofu"], foods));
+/*[
+    { id: 1, name: 'Tofu', price: 3 },
+    { id: 2, name: 'Carrot', price: 5 },
+    { id: 3, name: 'Ginger', price: 2 }
+]*/
+
+
 const getPrices = (object) => {
     let prices = []
     for (let i = 0; i < object.length; i++) {

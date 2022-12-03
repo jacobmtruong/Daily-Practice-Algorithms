@@ -50,12 +50,28 @@ Object.defineProperty(person1, "name", {
     value: 'John'
 })
 
-console.log(person1.date);  //2022-12-03T18:28:55.074Z
-console.log(person1.name);  //John
+//console.log(person1.date);  //2022-12-03T18:28:55.074Z
+//console.log(person1.name);  //John
 
 
 
-// for (const [key, value] of Object.entries(object1)){
-//     console.log(`${key}: ${value}`);
-// }
+// ============ .entries() ============
+
+const phone = {
+    brand: 'Nokia',
+    model: 'N65'
+}
+
+Object.entries(phone) //[ [ 'brand', 'Nokia' ], [ 'model', 'N65' ] ]
+
+
+
+// ============ .fromEntries() ============
+
+const phoneArray = [ [ 'brand', 'Nokia' ], [ 'model', 'N65' ] ]
+
+Object.fromEntries(phoneArray)  // { brand: 'Nokia', model: 'N65' }
+
+
+
  

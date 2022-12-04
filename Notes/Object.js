@@ -86,3 +86,16 @@ delete person2.age
 
 //console.log(person2)    //{ name: 'John', age: 34 }
 
+
+var dog = {name: 'Mika', type: 'dog'}
+var cat = {name: 'Frida', type: 'cat'}
+
+var pets = [dog, cat]
+//console.log(pets);    //[ { name: 'Mika', type: 'dog' }, { name: 'Frida', type: 'cat' } ]
+
+cat.age = 10 
+pets[0].age = 5
+
+//console.log(pets);    //[{ name: 'Mika', type: 'dog' },{ name: 'Frida', type: 'cat', age: 10 }]
+
+

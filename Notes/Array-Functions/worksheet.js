@@ -72,9 +72,18 @@ const femaleCharacters = characters.filter(
 console.log(femaleCharacters);
 
 // *** MAP ***
-//1. Get array pf all the names
+// 1. Get array pf all the names
 const names = characters.map((character) => character.name);
 // console.log(names);
-//2. Get array of all the heights
+// 2. Get array of all the heights
 const heights = characters.map((character) => character.height);
-console.log(heights);
+// console.log(heights);
+// 3. Get array of all objects included name and height
+const namesandheight = characters.map((character) => ({
+  name: character.name,
+  height: character.height,
+}));
+// console.log(namesandheight);
+// 4. Get array of all first names
+const firstNames = characters.map((character) => character.name.split(" ")[0]);
+console.log(firstNames);

@@ -70,3 +70,11 @@ const femaleCharacters = characters.filter(
   (character) => character.gender === "female"
 );
 console.log(femaleCharacters);
+
+// *** MAP ***
+//1. Get array pf all the names
+const names = characters.map((character) => character.name);
+// console.log(names);
+//2. Get array of all the heights
+const heights = characters.map((character) => character.height);
+console.log(heights);

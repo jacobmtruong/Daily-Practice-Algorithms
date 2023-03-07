@@ -52,6 +52,7 @@ const characters = [
 ];
 
 // *** FILTER ***
+
 // 1. Get all characters with mass greater than 100
 const massGreater100 = characters.filter((character) => character.mass > 100);
 // console.log(massGreater100);
@@ -75,6 +76,7 @@ const femaleCharacters = characters.filter(
 console.log(femaleCharacters);
 
 // *** MAP ***
+
 // 1. Get array pf all the names
 const names = characters.map((character) => character.name);
 // console.log(names);
@@ -95,6 +97,7 @@ const firstNames = characters.map((character) => character.name.split(" ")[0]);
 console.log(firstNames);
 
 // *** SOME ***
+
 // 1. At least one male character
 const oneMale = characters.some((character) => character.gender === "male");
 // console.log(oneMale);
@@ -110,3 +113,43 @@ const taller200 = characters.some((character) => character.height > 200);
 // 4. At least one character has a mass less than 50
 const massless50 = characters.some((character) => character.mass < 50);
 console.log(massless50);
+
+// *** SORT ***
+
+// 1. Sort by height
+const byHeight = characters.sort((a, b) => a.height - b.height);
+console.log(byHeight);
+
+//2. Sort by mass
+const byWeight = characters.sort((a, b) => a.mass - b.mass);
+console.log(byWeight);
+
+// 3. Sort by names
+const byName = characters.sort((a, b) => {
+  if (a.name < b.name) return -1;
+  return 1;
+});
+// console.log(byName);
+
+// 4. Sort by gender
+const byGender = characters.sort((a, b) => {
+  if (a.gender === "female") return -1;
+  return 1;
+});
+console.log(byGender);
+
+// *** EVERY ***
+
+// 1. Does every character have blue eyes?
+const allBlueEyes = characters.every(
+  (character) => character.eye_color === "blue"
+);
+// console.log(allBlueEyes);
+
+// 2. Does every character have weight mass more 40
+const weightMass40 = characters.every((character) => character.mass > 40);
+console.log(weightMass40);
+
+// 3. Is every character shorter than 200
+const shorterThan200 = characters.every((character) => character.height > 200);
+console.log(shorterThan200);

@@ -148,8 +148,14 @@ const allBlueEyes = characters.every(
 
 // 2. Does every character have weight mass more 40
 const weightMass40 = characters.every((character) => character.mass > 40);
-console.log(weightMass40);
+// console.log(weightMass40);
 
 // 3. Is every character shorter than 200
 const shorterThan200 = characters.every((character) => character.height > 200);
-console.log(shorterThan200);
+// console.log(shorterThan200);
+
+// 4. Is every character is male
+const allMaleCharacters = characters.every(
+  (character) => character.gender === "male"
+);
+// console.log(allMaleCharacters);
